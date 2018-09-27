@@ -1,0 +1,50 @@
+body
+{
+	background-color: #ccc;
+	padding: 0;
+	margin: 0;
+	background-image: url('https://placeimg.com/640/480/any');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.overlay
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	background-color: rgba(69, 91, 131, 0.75);
+}
+
+.overlay--closed
+{
+	display: none;
+}
+
+.overlay__wrap
+{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.overlay__header
+{
+	display: flex;
+	padding: 25px;
+	justify-content: flex-end;
+}
+
+.overlay__view
+{
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.overlay__view-box
+{
+	background-color: #fff;
+}

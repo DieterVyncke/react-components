@@ -1,0 +1,30 @@
+body
+{
+	background-color: #ccc;
+}
+
+.dot-pagination
+{
+	display: flex;
+}
+
+.dot-pagination__item
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 25px;
+	width: 25px;
+	transition: background-color .5s;
+}
+
+.dot-pagination__item--active
+{
+	background-color: blue;
+}
+
+.dot-pagination__btn
+{
+	border: 0;
+	cursor: pointer;
+}
