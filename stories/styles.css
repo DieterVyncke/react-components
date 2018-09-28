@@ -1,0 +1,10 @@
+@import '../src/alert/index.css';
+@import '../src/alert-overlay/index.css';
+@import '../src/confirm/index.css';
+@import '../src/confirm-overlay/index.css';
+@import '../src/dot-pagination/index.css';
+@import '../src/image-slideshow/index.css';
+@import '../src/loading-image/index.css';
+@import '../src/overlay/index.css';
+@import '../src/slideshow/index.css';
+@import '../src/window/index.css';
