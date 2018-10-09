@@ -89,14 +89,29 @@ export default class Carousel extends React.Component {
   }
 
   render() {
+
+    let slides;
+
+    if (this.props.children.length > 1) {
+      slides = this.props.children.map((child, i) => {
+        return (
+          <div key={i} className={'carousel__slide' + (this.state.activeIndex === i ? ' carousel__slide--active' : '')} ref={'slide-'+i} onClick={e => this.goTo(i)}>
+            {child}
+          </div>
+        );
+      });
+    } else {
+      slides = (
+        <div className={'carousel__slide' + (this.state.activeIndex === 0 ? ' carousel__slide--active' : '')} ref={'slide-'+0} onClick={e => this.goTo(i)}>
+          {this.props.children}
+        </div>
+      );
+    }
+
     return (
       <div className="carousel" ref="wrapper">
         <div className="carousel__wrap" style={{transform: 'translateX('+this.state.translateX+'px)'}}>
-          {this.props.children.map((child, i) => (
-            <div key={i} className={'carousel__slide' + (this.state.activeIndex === i ? ' carousel__slide--active' : '')} ref={'slide-'+i} onClick={e => this.goTo(i)}>
-              {child}
-            </div>
-          ))}
+          {slides}
         </div>
       </div>
     );
