@@ -1,0 +1,23 @@
+.carousel
+{
+	width: 900px;
+	overflow: hidden;
+	margin-left: 150px;
+}
+
+.carousel__wrap
+{
+	display: flex;
+	transition: transform .75s;
+}
+
+.carousel__slide
+{
+	opacity: .7;
+	transition: opacity 1s;
+}
+
+.carousel__slide--active
+{
+	opacity: 1;
+}
