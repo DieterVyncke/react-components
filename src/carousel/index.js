@@ -34,7 +34,7 @@ export default class Carousel extends React.Component {
 
     let prevIndex = this.state.activeIndex-1;
 
-    if (prevIndex <= 0) {
+    if (prevIndex < 0) {
       this.goTo(this.props.children.length-1);
     } else {
       this.goTo(prevIndex);
